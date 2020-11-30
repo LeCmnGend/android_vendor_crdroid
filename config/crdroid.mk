@@ -233,3 +233,9 @@ PRODUCT_PACKAGES += \
 	XperiaWiFiOverlay \
 	ZigZagSignalOverlay \
 	ZigZagWiFiOverlay
+
+# Conditionally build FOD animation resources
+ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
+PRODUCT_PACKAGES += \
+    FodAnimationResources
+endif
