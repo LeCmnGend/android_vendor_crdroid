@@ -38,6 +38,7 @@ SOONG_CONFIG_lineageGlobalVars += \
     has_memfd_backport \
     ignores_ftp_pptp_conntrack_failure \
     needs_camera_boottime \
+    inline_kernel_building \
     needs_netd_direct_connect_rule \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
@@ -70,6 +71,7 @@ SOONG_CONFIG_lineageQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_lineageGlobalVars_inline_kernel_building := $(INLINE_KERNEL_BUILDING)
 SOONG_CONFIG_lineageGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_lineageGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_lineageGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
